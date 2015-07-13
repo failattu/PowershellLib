@@ -1,3 +1,6 @@
-﻿Write-Verbose "Computer ip resolving"
-$computer = gc env:computername
-(Resolve-DnsName $computer).ip4address
+function getIP()
+{
+  Write-Verbose "Computer ip resolving"
+  $comp = gc env:computername
+  return (Resolve-DnsName $comp).ip4address
+}
