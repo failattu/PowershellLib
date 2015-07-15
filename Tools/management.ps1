@@ -1,0 +1,3 @@
+function getDrive(){
+  Get-PSDrive
+}
